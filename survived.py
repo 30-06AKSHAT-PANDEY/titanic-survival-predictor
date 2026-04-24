@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-df=pd.read_csv("train")
+df=pd.read_csv("train.csv")
 X=df[["Sex","Pclass","Age","Fare"]].copy()
 X["Sex"]=X["Sex"].map({"male": 0, "female": 1})
 X["Age"]=X["Age"].fillna(X["Age"].mean())
